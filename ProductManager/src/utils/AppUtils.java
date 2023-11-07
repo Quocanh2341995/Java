@@ -1,0 +1,52 @@
+package utils;
+
+import java.sql.Date;
+import java.util.Scanner;
+
+public class AppUtils {
+    static Scanner sc = new Scanner(System.in);
+    public static int getNumber(String str) {
+        System.out.println(str);
+        int num;
+        try {
+            num = Integer.parseInt(sc.nextLine());
+            return num;
+        } catch (Exception e) {
+            System.out.println("Du lieu nhap vao khong dung dinh dang !");
+            return getNumber(str);
+        }
+    }
+    public static int getNumber(String str, int min, int max) throws IndexOutOfBoundsException {
+        System.out.println(str);
+        int num;
+        try {
+            num = Integer.parseInt(sc.nextLine());
+            //min = 1 max = 7
+            if(num < min || num > max) {
+                System.err.println("Chọn từ khoảng " + min + " và " + max);
+                return getNumber(str,min,max);
+            }
+            return num;
+        } catch (Exception e) {
+            System.err.println("Khong dung dinh dang");
+            return getNumber(str,min,max);
+        }
+
+    }
+    public static String getString(String str) throws IndexOutOfBoundsException {
+        System.out.println(str);
+        return sc.nextLine();
+    }
+
+    public static Date getDay(String str) {
+        System.out.println(str);
+        System.out.println("Kieu du lieu ngay : yyyy-mm-dd, vidu: 2023-01-01");
+        try {
+            return Date.valueOf(sc.nextLine());
+        } catch (Exception e) {
+            return getDay(str);
+        }
+    }
+
+
+}
