@@ -1,0 +1,7 @@
+C0823K1,QuocAnh1,27,Nam,Hue,8.5
+C0823K2,QuocAnh2,27,Nam,Hue,7.5
+C0823K3,QuocAnh3,27,Nu,Hue,9.5
+C0823K4,QuocAnh4,27,Nam,Hue,6.5
+C0823K5,QuocAnh5,27,Nam,Hue,5.5
+
+
